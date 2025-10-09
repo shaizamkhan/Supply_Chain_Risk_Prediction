@@ -7,7 +7,7 @@
 Raw hourly data was aggregated to a daily cadence based on the feature's operational significance:
 
 * **Maximum (Max) Aggregation:** Used for **Worst-Case Stress Drivers** (e.g., Max Traffic, Max Weather) to capture the single bottleneck hour that dictates the day's total risk.
-* **Mean (Average) Aggregation:** Used for **Rate-Based Metrics** and **Target Variables** (e.g., $\mathbf{P}_{\text{High\_Risk}}$) to provide a stable, representative figure for time-series modeling.
+* **Mean (Average) Aggregation:** Used for **Rate-Based Metrics** and **Target Variables** (e.g., **P**<sub>High-Risk</sub>) to provide a stable, representative figure for time-series modeling.
 * **Sum Aggregation:** Used for **Cumulative Totals** (e.g., Total Volume Processed) to measure the day's total operational load.
 
 ### 2. Stationarity and Multicollinearity
@@ -19,12 +19,12 @@ Raw hourly data was aggregated to a daily cadence based on the feature's operati
 
 ### 1. Cascade Architecture
 
-The $\text{XGBoost}$ regressor utilizes the Phase I forecast (**$\mathbf{\text{SARIMAX\_Predicted\_Delay}}$**) as its most powerful temporal feature, combining it with essential lagged operational features (system memory) and remaining VIF-filtered external variables.
+The $\text{XGBoost}$ regressor utilizes the Phase I forecast (**SARIMAX_Predicted_Delay**) as its most powerful temporal feature, combining it with essential lagged operational features (system memory) and remaining VIF-filtered external variables.
 
 ### 2. Feature Importance Insights (Gain Metric)
 
 * **Lagged Persistence Dominance:** The most critical feature was the previous day's risk ($\mathbf{P}_{\text{High\_Risk}_{t-1}}$), confirming that **system memory** (backlog and residual stress) dictates the majority of the current day's risk.
-* **Cascade Validation:** The high ranking of the $\mathbf{\text{SARIMAX\_Predicted\_Delay}}$ feature validated the architecture, proving that the specialized temporal output from Phase I provided non-redundant predictive gain for the final risk score.
+* **Cascade Validation:** The high ranking of the **SARIMAX_Predicted_Delay** feature validated the architecture, proving that the specialized temporal output from Phase I provided non-redundant predictive gain for the final risk score.
 
 ## Strategic Output: Dynamic Percentile Bucketing (DPB)
 
