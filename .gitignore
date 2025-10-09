@@ -1,0 +1,11 @@
+# Python specific
+__pycache__/
+*.pyc
+venv/
+.ipynb_checkpoints/
+
+# Data and large files
+*.csv
+*.zip
+*.parquet
+*.pkl

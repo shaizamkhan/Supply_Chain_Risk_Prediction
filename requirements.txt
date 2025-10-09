@@ -1,0 +1,7 @@
+# Example contents for requirements.txt
+pandas
+numpy
+scikit-learn
+statsmodels
+xgboost
+jupyter
