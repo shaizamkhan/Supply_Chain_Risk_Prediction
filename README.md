@@ -17,6 +17,12 @@ This project successfully developed and rigorously validated the **SARIMAX-XGBoo
 | **Operational State** | Confirmed through multi-year forecasting that the system operates in a state of chronic high risk, a condition driven by internal constraints rather than external factors. This is the **Forecast Paradox**. | Forecasted $\mathbf{\sim 75}$% risk baseline (Prediction Paradox). | Justifies the urgent need for building long-term "system slack" or buffer capacity and prioritizes capital expenditure toward solving the internal bottleneck over contingency planning for external events. |
 | **Actionable Tool** | Created a highly practical, relative risk classification system to translate the continuous numerical forecast into an easily interpreted operational signal. | **Dynamic Percentile Bucketing (DPB)**, using $25^{\text{th}}$ and $75^{\text{th}}$ percentile thresholds. | Enables targeted, high-value allocation of expensive operational resources only to the **worst $25\%$** of predicted days, significantly improving cost efficiency and focusing management attention. |
 
+### Visual Proof: The Forecast Paradox and Structural Bottleneck
+
+The distribution of daily risk confirms the **~75% chronic risk baseline** (the Forecast Paradox). This structural floor proves that the system's stress is driven by internal process constraints, not external volatility.
+
+![Histogram of Daily Risk Proportion Distribution](assets/P_High_risk_histogram.jpg)
+
 ## ⚙️ Technical Stack
 
 | Area | Technology/Method | Purpose |
